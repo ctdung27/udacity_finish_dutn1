@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "group",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "pattern": "^(?!\\s*$).+"
+    },
+
+    "dueDate": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "dueDate"
+  ],
+  "additionalProperties": false
+}
